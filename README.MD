@@ -39,12 +39,9 @@
 ```
     ./create_containers.sh
 ```
+&ensp;&ensp; Now, you should be able to boot roach2 board up through netboot!
 
-&ensp; ***NOTE:***  
-&ensp;&ensp; **DO NOT** use "sudo" here, or docker-compose will not get the env variables you set in netboot_env.sh.  
-
-&ensp;&ensp; <font size=4>Now, you should be able to boot roach2 board up through netboot!</font>
-
+&ensp; ***NOTE:*** &ensp; **DO NOT** use "sudo" here, or docker-compose will not get the env variables you set in netboot_env.sh.  
 
 ## Delete containers
 &ensp; If you don't want to use the containers, you can run the following script to delete them.   
