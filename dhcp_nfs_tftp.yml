@@ -7,22 +7,22 @@ services:
       - ./config/dhcp:/data
     network_mode: host
     command:
-      - {DHCP_PORT}
+      - ${DHCP_PORT}
 
   tftp:
     image: pghalliday/tftp
     container_name: tftp
     volumes:
-      - {TFTP_DIR}:/var/tftpboot
+      - ${TFTP_DIR}:/var/tftpboot
     ports:
       - "69:69/udp" 
       
   nfs_v3:
     image: erichough/nfs-server:latest
-    container_name: nfs-v3
+    container_name: nfs_v3
     privileged: true
     volumes:
-      - {NFS_SHARE_DIR}:/data
+      - ${NFS_SHARE_DIR}:/data
       - ./config/nfs/exports:/etc/exports
     ports:
       - "2049:2049/tcp"

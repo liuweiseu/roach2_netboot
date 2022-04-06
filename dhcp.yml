@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.0"
 services:
   dhcp:
     image: networkboot/dhcpd
@@ -7,6 +7,6 @@ services:
       - ./config/dhcp:/data
     network_mode: host
     command:
-      - {DHCP_PORT}
+      - ${DHCP_PORT}
 
   
