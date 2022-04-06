@@ -2,11 +2,11 @@ version: "2.1"
 services:
   nfs_v3:
     image: erichough/nfs-server:latest
-    container_name: nfs_v3
+    container_name: nfs-v3
     privileged: true
     volumes:
-      - /home/wei/roach2/nfs:/data
-      - /home/wei/roach2/exports:/etc/exports
+      - ./nfs:/data
+      - ./config/exports:/etc/exports
     ports:
       - "2049:2049/tcp"
       - "2049:2049/udp"

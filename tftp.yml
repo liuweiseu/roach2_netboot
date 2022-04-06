@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  tftp:
+    image: pghalliday/tftp
+    container_name: tftp
+    volumes:
+      - ./tftp:/data
+    ports:
+      - "69:69/udp"    
+  
