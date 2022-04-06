@@ -2,16 +2,11 @@ version: "2.1"
 services:
   dhcp:
     image: networkboot/dhcpd
-    container_name: dhcp
+    container_name: dhcp_test
     volumes:
-      - ./config:/data
-    networks:
-      - dhcp_network
-
-networks:
-  dhcp_network:
-    driver: 
-      - host
-    driver_opts: 
+      - ./config/dhcp:/data
+    network_mode: host
+    command:
       - enp6s0
+
   

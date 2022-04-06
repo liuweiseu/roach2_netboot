@@ -6,7 +6,7 @@ services:
     privileged: true
     volumes:
       - ./nfs:/data
-      - ./config/exports:/etc/exports
+      - ./config/nfs/exports:/etc/exports
     ports:
       - "2049:2049/tcp"
       - "2049:2049/udp"

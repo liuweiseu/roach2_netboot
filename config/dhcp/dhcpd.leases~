@@ -19,18 +19,15 @@ lease 192.168.2.130 {
   ends 3 2022/04/06 01:06:05;
   tstp 3 2022/04/06 01:06:05;
   cltt 2 2022/04/05 19:06:05;
-  binding state active;
-  next binding state free;
-  rewind binding state free;
+  binding state free;
   hardware ethernet 00:50:b6:ea:99:ed;
   uid "\001\000P\266\352\231\355";
-  client-hostname "raspberrypi";
 }
 lease 192.168.2.129 {
-  starts 2 2022/04/05 22:33:33;
-  ends 3 2022/04/06 04:33:33;
-  tstp 3 2022/04/06 04:33:33;
-  cltt 2 2022/04/05 22:33:33;
+  starts 3 2022/04/06 01:33:33;
+  ends 3 2022/04/06 07:33:33;
+  tstp 3 2022/04/06 07:33:33;
+  cltt 3 2022/04/06 01:33:33;
   binding state active;
   next binding state free;
   rewind binding state free;
