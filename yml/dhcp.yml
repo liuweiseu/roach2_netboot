@@ -2,7 +2,7 @@ version: "3.0"
 services:
   dhcp:
     image: networkboot/dhcpd
-    container_name: dhcp
+    container_name: r2-dhcp
     volumes:
       - ./config/dhcp:/data
     network_mode: host

@@ -2,16 +2,16 @@ version: "2.1"
 services:
   dhcp:
     image: networkboot/dhcpd
-    container_name: dhcp
+    container_name: r2-dhcp
     volumes:
-      - ./config/dhcp:/data
+      - ../config/dhcp:/data
     network_mode: host
     command:
       - ${DHCP_PORT}
 
   tftp:
     image: pghalliday/tftp
-    container_name: tftp
+    container_name: r2-tftp
     volumes:
       - ${TFTP_DIR}:/var/tftpboot
     ports:
@@ -19,11 +19,11 @@ services:
       
   nfs_v3:
     image: erichough/nfs-server:latest
-    container_name: nfs_v3
+    container_name: r2-nfs-v3
     privileged: true
     volumes:
       - ${NFS_SHARE_DIR}:/data
-      - ./config/nfs/exports:/etc/exports
+      - ../config/nfs/exports:/etc/exports
     ports:
       - "2049:2049/tcp"
       - "2049:2049/udp"

@@ -2,7 +2,7 @@ version: "2.1"
 services:
   tftp:
     image: pghalliday/tftp
-    container_name: tftp
+    container_name: r2-tftp
     volumes:
       - {TFTP_DIR}:/var/tftpboot
     ports:

@@ -1,5 +1,5 @@
 #! /bin/bash
 
-sudo docker rm -f dhcp
-sudo docker rm -f tftp
-sudo docker rm -f nfs_v3
+sudo docker rm -f r2-dhcp
+sudo docker rm -f r2-tftp
+sudo docker rm -f r2-nfs-v3
