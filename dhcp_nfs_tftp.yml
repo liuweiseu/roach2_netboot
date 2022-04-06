@@ -1,5 +1,22 @@
 version: "2.1"
 services:
+  dhcp:
+    image: networkboot/dhcpd
+    container_name: dhcp
+    volumes:
+      - ./config/dhcp:/data
+    network_mode: host
+    command:
+      - {DHCP_PORT}
+
+  tftp:
+    image: pghalliday/tftp
+    container_name: tftp
+    volumes:
+      - {TFTP_DIR}:/var/tftpboot
+    ports:
+      - "69:69/udp" 
+      
   nfs_v3:
     image: erichough/nfs-server:latest
     container_name: nfs-v3

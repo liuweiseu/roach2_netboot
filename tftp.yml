@@ -2,9 +2,9 @@ version: "2.1"
 services:
   tftp:
     image: pghalliday/tftp
-    container_name: tftp_test
+    container_name: tftp
     volumes:
-      - ./tftp:/var/tftpboot
+      - {TFTP_DIR}:/var/tftpboot
     ports:
       - "69:69/udp"    
   
