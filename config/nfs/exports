@@ -1,0 +1,1 @@
+/data *(rw,subtree_check,no_root_squash,insecure)
