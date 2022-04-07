@@ -25,7 +25,7 @@
 &ensp; Now, you should get a new directory named "debian_stable_devel".  
 
 4. go to roach2_netboot and edit netboot_env.sh
-&ensp; There are three env parameters in the netboot_env.sh:
+&ensp; There are three env vairables in the netboot_env.sh:
 * DHCP_PORT: This is the port you connected to roach2 board, which is used for DHCP. 
 * TFTP_DIR: This is the directory for tftp files, which should be pointed to "roach2_nfs_uboot/boot"
 * NFS_SHARE_DIR: This is the nfs directory, which should be pointed to "roach2_nfs_uboot/debian_stable_devel".
@@ -66,7 +66,7 @@
 Error response from daemon: driver failed programming external connectivity on endpoint r2-nfs-v3 (30830cd20e4fdd85de2187235abe7174245965bb6dca7b8aceb8c7f07f74fbd5): Error starting userland proxy: listen tcp4 0.0.0.0:111: bind: address already in use
 Error: failed to start containers: r2-nfs-v3
 ```
-&ensp; The reason is that portmap server on your host computer is using port 111.
+&ensp; The reason is that portmap service on your host computer is using port 111.
 &ensp; Therefore, the method to fix this issue is to stop this service:
 ```
     sudo systemctl stop portmap.service
