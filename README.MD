@@ -1,7 +1,7 @@
 # ROACH2 NETBOOT
 
 ## Descriptions
-&ensp; These scripts are used for [roach2](https://casper.astro.berkeley.edu/wiki/ROACH2) netboot, which is based on docker.  
+&ensp; These scripts are used for [roach2](https://casper.astro.berkeley.edu/wiki/ROACH2) netboot, and they are based on docker.  
 &ensp; Before using the scirpts, make sure docker and docker-compose have been install on your machine. If they are not installed, please follow the instructions here:  
 * [docker installation](https://docs.docker.com/engine/install/)
 * [docker-compse installation](https://docs.docker.com/compose/install/)
