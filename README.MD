@@ -43,9 +43,32 @@
 
 &ensp; ***NOTE:*** &ensp; **DO NOT** use "sudo" here, or docker-compose will not get the env variables you set in netboot_env.sh.  
 
+## Start and Stop containers
+&ensp; After the containers are created, they should be running on the background.  
+&ensp; However, if you reboot the system, you need to restart the containers manually by running the follow script.  
+```
+    ./start_containers.sh
+```
+
+&ensp; If you don't want to use the containers temporarily, You can also use the following script to stop them.  
+```
+    ./stop_containers.sh
+```
+
 ## Delete containers
 &ensp; If you don't want to use the containers, you can run the following script to delete them.   
 ```
     ./del_containers.sh
 ```
-
+## Issue and Fix
+&ensp; When you create or start the containers, you may see the issue like this:
+```
+Error response from daemon: driver failed programming external connectivity on endpoint r2-nfs-v3 (30830cd20e4fdd85de2187235abe7174245965bb6dca7b8aceb8c7f07f74fbd5): Error starting userland proxy: listen tcp4 0.0.0.0:111: bind: address already in use
+Error: failed to start containers: r2-nfs-v3
+```
+&ensp; The reason is that portmap server on your host computer is using port 111.
+&ensp; Therefore, the method to fix this issue is to stop this service:
+```
+    sudo systemctl stop portmap.service
+```
+&ensp; Then you should be able to create or start the container.  
