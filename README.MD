@@ -31,7 +31,7 @@
 * NFS_SHARE_DIR: This is the nfs directory, which should be pointed to "roach2_nfs_uboot/debian_stable_devel".
 
 &ensp; ***NOTE:***   
-&ensp;&ensp; (1) You need to set an **STATIC IP** address for the port you specified in netboot_env.sh.  
+&ensp;&ensp; (1) You need to set an **STATIC IP** address for the port you specified in netboot_env.sh.(In this example, the static IP should be 192.168.2.1)   
 &ensp;&ensp; (2) DHCP IP range is set in ./config/dhcp/dhcpd.conf.  
 
 5. create dhcp, tftp and nfs containers  
