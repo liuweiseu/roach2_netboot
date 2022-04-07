@@ -56,7 +56,7 @@
 ```
 
 ## Delete containers
-&ensp; If you don't want to use the containers, you can run the following script to delete them.   
+&ensp; If you don't want to use the containers any more, you can run the following script to delete them.   
 ```
     ./del_containers.sh
 ```
