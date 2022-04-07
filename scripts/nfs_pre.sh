@@ -1,4 +1,5 @@
 #! /bin/bash
 
-sudo modprobe {nfs,nfsd}
+sudo modprobe nfs
+sudo modprobe nfsd
 echo "nfs and nfsd added."
