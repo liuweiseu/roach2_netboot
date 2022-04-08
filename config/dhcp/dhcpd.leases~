@@ -33,15 +33,23 @@ lease 192.168.2.129 {
   set vendor-class-identifier = "S3900-24F4S";
 }
 lease 192.168.2.131 {
-  starts 4 2022/04/07 19:15:08;
-  ends 5 2022/04/08 01:15:08;
-  tstp 5 2022/04/08 01:15:08;
-  cltt 4 2022/04/07 19:15:08;
+  starts 4 2022/04/07 21:45:40;
+  ends 5 2022/04/08 03:45:40;
+  tstp 5 2022/04/08 03:45:40;
+  cltt 4 2022/04/07 21:45:40;
   binding state active;
   next binding state free;
   rewind binding state free;
   hardware ethernet 02:44:01:02:06:35;
   client-hostname "r2-2635";
 }
-server-duid "\000\001\000\001)\341\357|\000\340Lhq\327";
+server-duid "\000\001\000\001)\342\034e\000\340Lhq\327";
 
+lease 192.168.2.131 {
+  starts 4 2022/04/07 21:45:40;
+  ends 5 2022/04/08 03:45:40;
+  tstp 5 2022/04/08 03:45:40;
+  cltt 4 2022/04/07 21:45:40;
+  binding state free;
+  hardware ethernet 02:44:01:02:06:35;
+}
