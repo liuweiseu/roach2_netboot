@@ -24,8 +24,8 @@
 ```
 &ensp; Now, you should get a new directory named "debian_stable_devel".  
 
-4. go to roach2_netboot and edit netboot_env.sh
-&ensp; There are three env vairables in the netboot_env.sh:
+4. go to roach2_netboot and edit netboot_env.sh  
+ There are three env vairables in the netboot_env.sh:
 * DHCP_PORT: This is the port you connected to roach2 board, which is used for DHCP. 
 * TFTP_DIR: This is the directory for tftp files, which should be pointed to "roach2_nfs_uboot/boot"
 * NFS_SHARE_DIR: This is the nfs directory, which should be pointed to "roach2_nfs_uboot/debian_stable_devel".
