@@ -61,12 +61,12 @@
     ./del_containers.sh
 ```
 ## Issue and Fix
-&ensp; When you create or start the containers, you may see the issue like this:
+&ensp; When you create or start the containers, you may have the issue like this:
 ```
 Error response from daemon: driver failed programming external connectivity on endpoint r2-nfs-v3 (30830cd20e4fdd85de2187235abe7174245965bb6dca7b8aceb8c7f07f74fbd5): Error starting userland proxy: listen tcp4 0.0.0.0:111: bind: address already in use
 Error: failed to start containers: r2-nfs-v3
 ```
-&ensp; The reason is that portmap service on your host computer is using port 111.
+&ensp; The reason is that portmap service on your host computer is using port 111.  
 &ensp; Therefore, the method to fix this issue is to stop this service:
 ```
     sudo systemctl stop portmap.service
